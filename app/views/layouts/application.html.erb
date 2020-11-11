@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>BoostrapDemo</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
+  <%= render 'head' %> 
   <body>
-    <%= yield %>
+    <%= render 'navbar' %>
+    <div class="container">
+    <%= render 'flash_message' %>
+      <%= yield %>
+    </div> 
   </body>
 </html>
